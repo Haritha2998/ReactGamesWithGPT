@@ -1,0 +1,173 @@
+.viewContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 30px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    margin-top: -10px;
+    font-size: 20px;
+    color: aqua;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer button {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-inline: 100px;
+    margin: 20px;
+
+}
+
+.XOButton {
+    border: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: aqua;
+    background-color: #000;
+}
+
+.XOButton:hover {
+    border-color: aqua;
+}
+
+.selected {
+    background-color: aqua;
+    color: white;
+}
+
+/* .vertical-line,
+  .horizontal-line {
+    position: absolute;
+    background-color:white; 
+  }
+   */
+.logo {
+    display: flex;
+    position: relative;
+    margin-block: 40px;
+    margin-right: 10px;
+}
+
+.horizontal {
+    position: absolute;
+    z-index: 1;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.vertical-line {
+    width: 4px;
+    height: 60px;
+    margin-right: 20px;
+    transform: translateX(-25%);
+    background-color: white;
+    position: relative;
+}
+
+.horizontal-line {
+    width: 60px;
+    height: 4px;
+    margin-top: 20px;
+    transform: translateY(-25%);
+    background-color: white;
+    position: relative;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    border: 10px solid white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 0px;
+    margin-block: 30px;
+}
+
+.status {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: aqua;
+    text-align: center;
+}
+
+.boxText {
+    font-size: 60px;
+    color: aqua;
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes winnerTransform {
+
+    0%,
+    100% {
+        transform: scale(1);
+        color: rgb(192, 22, 172);;
+    }
+
+    50% {
+        transform: scale(1.1);
+        color: rgb(249, 13, 162)
+    }
+}
+
+.winnerText {
+    animation: beat 1s infinite;
+}
+
+.boxTextHighlight {
+    animation: winnerTransform 1s infinite;
+}
+
+.restart {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}

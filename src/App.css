@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  display: flex;
+  background-color: black;
+  justify-content: space-evenly;
+}
+.link {
+  text-decoration: none;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  margin-block: 40px;
+  margin-right: 10px;
+}
+
+.horizontal {
+  position: absolute;
+  z-index: 1;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-left: 20px;
+}
+
+.vertical-line {
+  width: 4px;
+  height: 60px;
+  margin-right: 20px;
+  transform: translateX(-25%);
+  background-color: white;
+  position: relative;
+}
+
+.horizontal-line {
+  width: 60px;
+  height: 4px;
+  margin-top: 20px;
+  transform: translateY(-25%);
+  background-color: white;
+  position: relative;
+}
+
+.hangmanContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
